@@ -5,8 +5,10 @@ Clase 1 · Fundamentos de los Sistemas de Calidad + Setup de Playwright con Type
  
 ## Datos del estudiante
  
-- **Nombre:** [Gelen Dayanna Lopez Morales]
-- **Carné:** [1790-21-14904]
+- **Nombre:** [Gelen Dayanna Lopez Morales
+- Salvador André Martínez Juárez]
+- **Carné:** [1790-21-14904
+- 1790-19-6213]
 - **Versión de Node.js:** [v22.18.0]
  
 ## Proyecto
