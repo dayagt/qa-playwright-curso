@@ -35,3 +35,39 @@ npx playwright show-report
 3 de 3 tests pasando:
  
 ![Tests pasando](docs/tests-passing.png)
+
+# Evidencias de la Clase 02 — Playwright
+
+## Capturas generadas
+Durante la ejecución del archivo `tests/clase02.spec.ts` se generaron **4 capturas de pantalla** en la carpeta `evidencias/`.  
+Los archivos corresponden a distintos momentos de la prueba:
+
+- `pagina-inicio.png` → evidencia de la página principal al cargar la aplicación.  
+- `carrito-vacio.png` → evidencia del carrito de compras vacío (captura realizada con `fullPage: true`).  
+- `detalle-producto.png` → evidencia al visualizar el detalle de un producto en la categoría *Phones*.  
+- `navbar.png` → evidencia de la barra de navegación superior.   
+
+
+## Diferencia entre `fullPage: true` y una captura normal
+- **Captura normal**: registra únicamente la parte visible de la ventana del navegador (viewport).  
+- **Captura con `fullPage: true`**: recorre toda la página y captura incluso las secciones que requieren desplazamiento vertical.  
+Esto permite evidenciar elementos como el **footer**, que no siempre está visible en pantalla.
+
+## Importancia de capturar evidencias en pruebas de software
+Las capturas de pantalla son esenciales porque:
+- Documentan el estado visual de la aplicación en el momento de la prueba.  
+- Facilitan la comunicación de errores al equipo de desarrollo.  
+- Sirven como respaldo en auditorías y revisiones de calidad.  
+- Permiten validar aspectos gráficos que no se reflejan en los logs.
+
+## Auto-wait vs. `sleep()` en Playwright
+- **`sleep()`** introduce pausas fijas en la ejecución, lo que puede generar pruebas frágiles: si la aplicación tarda más, el test falla; si tarda menos, se desperdicia tiempo.  
+- **Auto-wait** espera dinámicamente hasta que el elemento esté disponible o la acción sea posible.  
+
+### Ventaja para las pruebas automatizadas
+El uso de auto-wait hace que las pruebas sean:
+- Más **estables**, porque se adaptan al comportamiento real de la aplicación.  
+- Más **rápidas**, al evitar tiempos muertos innecesarios.  
+- Más **confiables**, ya que reducen la probabilidad de falsos negativos.
+
+---
