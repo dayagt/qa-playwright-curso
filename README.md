@@ -71,3 +71,19 @@ El uso de auto-wait hace que las pruebas sean:
 - Más **confiables**, ya que reducen la probabilidad de falsos negativos.
 
 ---
+# Proyecto de Pruebas con Playwright
+
+Este repositorio contiene los tests automatizados del curso **Aseguramiento de la Calidad del Software** (Clase 03).
+
+## 📂 Estructura
+- `tests/clase03.spec.ts` → Contiene los 6 tests de clase + 3 tests reto.
+- `casos-de-prueba/TC-001.md` → Caso de prueba documentado: "Agregar al carrito".
+
+## Requisitos
+- Node.js (>= 18)
+- Playwright instalado globalmente o en el proyecto
+
+Instalación de dependencias:
+```bash
+npm install
+npx playwright install
