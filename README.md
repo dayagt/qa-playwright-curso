@@ -87,3 +87,23 @@ Instalación de dependencias:
 ```bash
 npm install
 npx playwright install
+
+# QA Playwright Curso · Clase 04
+
+Este proyecto contiene los tests automatizados de la 'Clase 04 - Principios de Pruebas (ISTQB)' del curso de Aseguramiento de la Calidad del Software.  
+Incluye los 4 tests vistos en clase y los 3 tests reto adicionales.
+
+---
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/dayagt/qa-playwright-curso.git
+   cd qa-playwright-curso
+
+# Reflexión Tarea 04
+
+De los 7 principios del testing, considero que el más importante es el Principio 3: Las pruebas tempranas ahorran tiempo y dinero.  
+La razón es que detectar defectos en etapas iniciales (requisitos, diseño, desarrollo) evita costos elevados y retrabajo en producción.  
+En mi experiencia con Playwright, encontrar un locator ambiguo en la primera clase fue rápido y barato; si ese error llegara a producción, el impacto sería mucho mayor.
