@@ -5,10 +5,8 @@ Clase 1 · Fundamentos de los Sistemas de Calidad + Setup de Playwright con Type
  
 ## Datos del estudiante
  
-- **Nombre:** [Gelen Dayanna Lopez Morales
-- Salvador André Martínez Juárez]
-- **Carné:** [1790-21-14904
-- 1790-19-6213]
+- **Nombre:** [Gelen Dayanna Lopez Morales]
+- **Carné:** [1790-21-14904]
 - **Versión de Node.js:** [v22.18.0]
  
 ## Proyecto
@@ -87,7 +85,7 @@ Instalación de dependencias:
 ```bash
 npm install
 npx playwright install
-
+```
 # QA Playwright Curso · Clase 04
 
 Este proyecto contiene los tests automatizados de la 'Clase 04 - Principios de Pruebas (ISTQB)' del curso de Aseguramiento de la Calidad del Software.  
@@ -107,3 +105,37 @@ Incluye los 4 tests vistos en clase y los 3 tests reto adicionales.
 De los 7 principios del testing, considero que el más importante es el Principio 3: Las pruebas tempranas ahorran tiempo y dinero.  
 La razón es que detectar defectos en etapas iniciales (requisitos, diseño, desarrollo) evita costos elevados y retrabajo en producción.  
 En mi experiencia con Playwright, encontrar un locator ambiguo en la primera clase fue rápido y barato; si ese error llegara a producción, el impacto sería mucho mayor.
+
+# Proyecto Clase 05 — Playwright Testing
+
+## Instalación y ejecución
+Clona este repositorio:
+git clone https://github.com/dayagt/qa-playwright-curso.git
+cd qa-playwright-curso
+
+Instala dependencias:
+npm install
+
+Ejecuta los tests:
+- Todos los tests:
+  npx playwright test
+- Archivo específico:
+  npx playwright test tests/clase05.spec.ts
+- Abrir reporte en navegador:
+  npx playwright show-report
+
+## Tests reto incluidos
+- toHaveValue() → validación de ordenamiento por precio.
+- toBeFocused() → validación de foco en campo usuario.
+- toHaveCSS() → validación de estilo en botón “Add to cart”.
+
+## Requisitos previos
+- Node.js v16 o superior.
+- Playwright instalado como dependencia del proyecto.
+- Conexión a internet para cargar la aplicación bajo prueba.
+
+## Estructura del proyecto
+- tests/clase05.spec.ts → contiene 12 tests base + 3 tests reto.
+- casos-de-prueba/tabla-de-decision-checkout.md → documento con mínimo 4 condiciones y 6 reglas.
+- README.md → instrucciones de instalación y ejecución.
+
