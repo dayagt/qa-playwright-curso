@@ -139,3 +139,26 @@ Ejecuta los tests:
 - casos-de-prueba/tabla-de-decision-checkout.md → documento con mínimo 4 condiciones y 6 reglas.
 - README.md → instrucciones de instalación y ejecución.
 
+# QA Playwright Curso · Clase 06
+
+Este proyecto contiene los tests automatizados de la **Clase 06 - Page Object Model (POM) en Sauce Demo**.  
+Incluye los 5 tests base vistos en clase y los 3 tests reto adicionales.
+
+---
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/dayagt/qa-playwright-curso.git
+   cd qa-playwright-curso
+
+   npm install
+Ejecución de los tests
+Para correr todos los tests de la Clase 06:
+   npx playwright test tests/clase06.spec.ts
+
+Si deseas ejecutar un test específico:
+   npx playwright test -g "Reto 3 - Quitar producto y badge desaparece"
+Para abrir el reporte en navegador:
+npx playwright show-report

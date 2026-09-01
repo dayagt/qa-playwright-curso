@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
  
 test('La página carga', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/TIENDA/);
+  await expect(page).toHaveTitle(/STORE/);
   await expect(page.locator('#navbarExample')).toBeVisible();
 });
  
