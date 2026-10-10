@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { loginAs } from '../helpers/auth'; 
 
-test.describe('Clase 10 - Tests Reto', () => {
+test.describe('tarea 10 - Tests Reto', () => {
   
   test.beforeEach(async ({ page }) => {
    
