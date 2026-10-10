@@ -162,3 +162,6 @@ Si deseas ejecutar un test específico:
    npx playwright test -g "Reto 3 - Quitar producto y badge desaparece"
 Para abrir el reporte en navegador:
 npx playwright show-report
+
+## Reporte de Ejecución Multi-browser
+![Reporte de Playwright](reporte-multi-browser.png)

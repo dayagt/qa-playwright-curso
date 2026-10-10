@@ -1,23 +1,18 @@
 import { Page } from '@playwright/test';
 
-export async function loginAs(
-  page: Page,
-  username: string
-) {
+export async function loginAs(page: Page, username: string) {
   const passwords: Record<string, string> = {
-    standard_user: 'secret_sauce',
-    problem_user: 'secret_sauce',
-    performance_glitch_user: 'secret_sauce',
-    locked_out_user: 'secret_sauce',
+    'standard_user': 'secret_sauce',
+    'problem_user': 'secret_sauce',
+    'performance_glitch_user': 'secret_sauce',
+    'locked_out_user': 'secret_sauce',
   };
 
   await page.goto('https://www.saucedemo.com');
-
   await page.locator('#user-name').fill(username);
-
-  await page.locator('#password').fill(
-    passwords[username] ?? 'secret_sauce'
-  );
-
+  await page.locator('#password').fill(passwords[username] ?? 'secret_sauce');
   await page.locator('#login-button').click();
+  
+  // ✅ Esperar a que la redirección se complete (evita race conditions)
+  await page.waitForURL(/inventory/, { timeout: 10000 });
 }
