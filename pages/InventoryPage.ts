@@ -44,6 +44,9 @@ await this.sortDropdown.selectOption(option);
 
 
 async removeProductByName(name: string) {
-  await this.page.getByText(name).locator('..').getByRole('button', { name: 'Remove' }).click();
+  // El padre del texto es el <a> del título, que no contiene el botón:
+  // se busca dentro de la tarjeta, igual que addProductByName
+  const product = this.page.locator('.inventory_item', { hasText: name });
+  await product.getByRole('button', { name: 'Remove' }).click();
 }
 }

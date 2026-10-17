@@ -13,6 +13,11 @@ export async function loginAs(page: Page, username: string) {
   await page.locator('#password').fill(passwords[username] ?? 'secret_sauce');
   await page.locator('#login-button').click();
   
-  // ✅ Esperar a que la redirección se complete (evita race conditions)
-  await page.waitForURL(/inventory/, { timeout: 10000 });
+  // ✅ Esperar a que el login termine (evita race conditions): inventario si
+  // fue exitoso, o el mensaje de error si no (p. ej. locked_out_user, que
+  // usa tarea08 Reto 3 con test.skip() dinámico)
+  await page
+    .locator('.inventory_list')
+    .or(page.locator('[data-test="error"]'))
+    .waitFor({ state: 'visible', timeout: 10000 });
 }
